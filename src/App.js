@@ -293,11 +293,11 @@ let fetchAndSetData = () => {
         {showAll?<section>
         <div className='appliedFilter-container'>
           <h5>Filters - </h5>
-          {allFilters.current.map((ele)=> {
+          {allFilters.current.map((ele,i)=> {
             return(
               <div>
                 {Object.keys(ele).map((key)=> {
-                  return(<div className='filer-applied'>
+                  return(<div className='filer-applied' key={i}>
                     {Object.values(ele)[0].map((val)=> {
                       return(
                         <h6>
