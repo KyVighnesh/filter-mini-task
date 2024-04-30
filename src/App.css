@@ -20,6 +20,11 @@
 }
 
 
+.App {
+  background: linear-gradient(120deg, rgb(215, 215, 255), rgb(208, 255, 188));
+
+}
+
 
 .App-link {
   color: #61dafb;
@@ -43,11 +48,15 @@
 .filter-container {
   width: 30%;
   height: 30%;
+  background: linear-gradient(120deg, rgb(203, 203, 249), rgba(218, 252, 203, 0.98));
+
 }
 
 .filter-wrapper {
   width: 90%;
   margin: auto;
+  background: linear-gradient(120deg, rgb(202, 202, 252), rgba(221, 252, 208, 0.98));
+
 }
 
 

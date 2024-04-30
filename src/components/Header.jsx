@@ -10,8 +10,8 @@ const Header = () => {
   return (
     <div>
 
-      <Navbar expand="lg" className="bg-body-tertiary">
-          <Navbar.Brand href="#">MovieHub</Navbar.Brand>
+      <Navbar expand="lg" className='head-nav'>
+          <Navbar.Brand href="#" style={{color:"white",fontSize:"28px"}}>MovieHub</Navbar.Brand>
       </Navbar>
     </div>
   )
