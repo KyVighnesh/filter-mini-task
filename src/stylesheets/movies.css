@@ -1,0 +1,126 @@
+
+
+.movie-cards {
+    width: 22%;
+    height: 600px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+    border: 10px solid black;
+}
+
+
+.movie-cards img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.genre-container {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.genre-buttons {
+    width: 120px;
+    border: 1px solid black;
+
+}
+
+.movie-wrapper {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media screen and (max-width:1080px) {
+    .movie-cards {
+        width: 250px;
+        margin: auto;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .movie-cards {
+        width: 250px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .movie-cards {
+        width:220px;
+        height: 420px;
+    }
+
+    .genre-container {
+        height: 100px;
+    }
+
+    .movie-cards h5 {
+        font-size: 14px;
+    }
+
+    .movie-cards button span {
+        font-size: 10px;
+    }
+
+    .movie-cards button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .movie-cards {
+        width:40%;
+        height: 420px;
+    }
+
+    .genre-container {
+        height: 120px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .movie-cards button span {
+        font-size: 8px;
+    }
+
+    .movie-cards button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-cards {
+        width: 45%;
+        height: 350px;
+    }
+
+    .genre-container {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .movie-cards {
+        width: 48%;
+        margin: auto;
+    }
+
+    .movie-wrapper {
+        margin: auto;
+    }
+}

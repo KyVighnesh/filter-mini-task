@@ -1,0 +1,235 @@
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.filter-movies-container {
+  display: flex;
+  width: 100%;
+}
+
+
+.filter-container {
+  width: 30%;
+  height: 30%;
+}
+
+.filter-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+
+.filters {
+  width: 90%;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 60px;
+  cursor: pointer;
+}
+
+.options-for-filters {
+  display: flex;
+  flex-direction: row;
+} 
+
+
+.filters h6 {
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters h6 img {
+  width: 15%;
+}
+
+.options{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  width: 100%;
+}
+
+.option-div {
+  width: 160px;
+  display: flex;
+}
+
+.task-bar {
+  height: 100px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-bar button {
+  height: 50px;
+}
+
+.appliedFilter-container {
+  height: 50px;
+  margin-top: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filer-applied {
+  display: inline-flex;
+  gap: 15px;
+  border-radius: 10px;
+  border: 1px solid green;
+  margin-left: 30px;
+}
+
+.filer-applied h6 {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 6px;
+}
+
+.appliedFilter-container {
+  display: flex;
+  gap: 30px;
+}
+
+.appliedFilter-container h5 {
+  margin-left: 40px;
+}
+
+
+@media screen and (max-width:1080px) {
+  .filter-wrapper {
+    width: 95%;
+    margin: auto;
+  }
+
+  .option-div {
+    width: 130px;
+    display: flex;
+  }
+
+  .options{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:900px) {
+
+  .option-div {
+    width: 130px;
+    display: flex;
+  }
+
+  .options{
+    width: 350px;
+  }
+
+  .option-div span{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:780px){
+  .filter-container {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+  }
+
+  .option-div {
+    display: flex;
+    width: 116px;
+  }
+
+
+  .filter-wrapper {
+    width: 100%;
+    margin: auto;
+  }
+
+  .filters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+  }
+
+  .options {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .option-div span{
+    display: flex;
+    align-items: center;
+  }
+
+  .filters h6 {
+    margin-top: 20px;
+    width: 150px;
+    margin: auto;
+    text-align: left;
+  }
+
+  .buttons-general span{
+    font-size: 13px;
+  }
+
+}
+
+@media screen and (max-width:550px) {
+  .buttons-general span{
+    font-size: 13px;
+  }
+
+}
+
+@media screen and (max-width:450px) {
+  .buttons-general span{
+    font-size: 10px;
+  }
+
+  @media screen and (max-width:375px) {
+    .buttons-general span{
+      font-size: 10px;
+    }
+
+}
+
+}
