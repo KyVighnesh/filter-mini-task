@@ -9,6 +9,11 @@ import Header from './components/Header';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+function getWindowDimensions() {
+  let width = window.innerWidth;
+  return width
+}
+
 
 function App() {
 
@@ -37,6 +42,20 @@ function App() {
   const[showAll,setShowAll] = useState(false)
 
   const allFilters = useRef([])
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+
+
+  useEffect(()=>{
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+
+  },[])
 
   useEffect(()=> {
 
@@ -251,6 +270,14 @@ let fetchAndSetData = () => {
   const onHandleShowFilter = () => {
     setShowFilter(!showFilter)
 
+
+    if(windowDimensions <=780) {
+      setWidth("100%")
+    }
+
+    else {
+
+      
     if(showFilter == false) {
       setWidth("70%")
       setBackground("white")
@@ -261,6 +288,7 @@ let fetchAndSetData = () => {
       setCentre("center")
     }
 
+    }
 
   }
 
@@ -290,9 +318,8 @@ let fetchAndSetData = () => {
   return (
     <div className="App">
         <Header/>
-        {showAll?<section>
-        <div className='appliedFilter-container'>
-          <h5>Filters - </h5>
+        {showAll?<section className='applied-filter-section'>
+        <div className='appliedFilter-container'>          
           {allFilters.current.map((ele,i)=> {
             return(
               <div>
@@ -327,7 +354,7 @@ let fetchAndSetData = () => {
         {filters.map((filter,i)=> {
           return(
             <div className='filters' key={i}>
-              <h6>{filter.type}  <img src='/arrow-left (2).png' onClick={()=>onHandleFilter(filter)}/></h6>
+              <h6 onClick={()=>onHandleFilter(filter)}>{filter.type}{filter.show?<img src='/arrow-left (2).png' style={{rotate:'180deg',transition:'rotate 0.5s'}}/>:<img src='/arrow-left (2).png' style={{transition:'rotate 0.5s'}}/>}</h6>
               {filter.show?<div className='options'>
               {filter.options.map((options)=>{
                 return(

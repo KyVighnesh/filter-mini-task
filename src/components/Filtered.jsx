@@ -23,7 +23,7 @@ const Filtered = (props) => {
                     {ele.moviegenres.map((generes,i)=> {
                         return(
                             <div key={i}>
-                                <Button variant="secondary">{generes}</Button>{' '}
+                                <Button variant="secondary"><span>{generes}</span></Button>{' '}
                             </div>
                         )
                     })}
